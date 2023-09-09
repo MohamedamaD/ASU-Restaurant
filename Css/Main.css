@@ -1,0 +1,654 @@
+/* Start Globla Rules  */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+:root{
+    --mainColor: #2196f3;
+    --textColor: #FFF;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+::selection{
+    background-color: var(--mainColor);
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Globla Rules  */
+
+/* Start header */
+
+header#header{
+    background-image: url(../Photo/headerBackground1.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.overLay{
+    position: absolute;
+    left: 0;top: 0;bottom: 0;
+    width: 100%;height: 100%;
+    background-color: rgba(0 0 0 / .5);
+    z-index: 1;
+}
+
+header#header .Navbar{
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+header#header .Navbar h3{
+    color: var(--textColor);
+    float: left;
+    width: 30%;
+    padding: 20px;
+    user-select: none;
+}
+
+header#header .Navbar .toggleUl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    float: left;
+}
+
+header#header .Navbar .toggleUl li{
+    color: var(--textColor);
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid transparent;
+}
+
+header#header .Navbar .toggleUl li.Active,
+header#header .Navbar .toggleUl li:hover{
+    color: var(--mainColor);
+    border-bottom-color: var(--mainColor);
+}
+
+header#header .sliderText{
+    position: relative;
+    z-index: 2;
+}
+
+header#header i.left,
+header#header i.right{
+    position: absolute;
+    top: 50%;
+    color: #FFF;
+    font-size: x-large;
+    transform: translateY(-50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+header#header i.left{
+    left: 20px;
+}
+
+header#header i.right{
+    right: 20px;
+}
+
+header#header i.left:hover,
+header#header i.right:hover{
+    color: var(--mainColor);
+}
+
+header#header .sliderText{
+    text-align: center;
+    position: absolute;
+    top: 50%;left: 0%;
+    transform: translateY(-50%);
+    display: flex;
+    width: 300%;
+}
+
+header#header .sliderText li{
+    width: 100%;
+}
+
+header#header .sliderText h3{
+    color: var(--textColor);
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+header#header .sliderText h3 span{
+    color: var(--mainColor);
+}
+header#header .sliderText p{
+    color: var(--textColor);
+    font-size: large;
+}
+
+header#header .barsIcon{
+    display: none;
+}
+
+@media (max-width: 767px) {
+    header#header .barsIcon{
+        display: block;
+        color: var(--textColor);
+        font-size: 25px;
+        margin: 20px;
+        cursor: pointer;
+        float: right;
+    }
+    header#header .Navbar .toggleUl{
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        display: none;
+    }
+    header#header .Navbar .toggleUl li{
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+/* End header */
+
+/* Repeated Item */
+
+.headingRepeat{
+    margin: 40px 0;
+}
+
+.headingRepeat h3{
+    font-size: x-large;
+    font-weight: normal;
+    color: #000;
+    position: relative;
+}
+
+.headingRepeat h3::after{
+    content: '';
+    position: absolute;
+    left: 0;bottom: -6px;
+    background-color: #000;
+    border-radius: 3px;
+    width: 30px;
+    height: 2px;
+}
+
+/* Start About section */
+section#about{
+    padding: 60 0;
+}
+
+section#about .Box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px 20px;
+    margin-bottom: 60px;
+}
+
+section#about .Box .boxItem{
+    width: calc((100% - 40px) / 3);
+    overflow: hidden;
+}
+
+section#about .Box .boxItem i{
+    float: left;
+    width: 40px;
+    margin-right: 3%;
+    font-size: xx-large;
+    color: var(--mainColor);
+}
+
+section#about .Box .boxItem .textBox {
+    float: left;
+    width: 78%;
+}
+
+section#about .Box .boxItem .textBox h3{
+    font-size: larger;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+section#about .Box .boxItem .textBox p{
+    font-size: small;
+    color: #474747;
+}
+
+/* Edit flexBox In Screen 767px */
+@media (max-width: 767px) {
+    section#about .Box{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    section#about .Box .boxItem{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .headingRepeat h3{
+        text-align: center;
+    }
+    .headingRepeat h3::after{
+        width: 100%;
+        bottom: -10px;
+    }
+}
+
+/* Start Part Two of Section */
+
+section#about hr{
+    background-color: #000;
+}
+
+section#about .Box2{
+    overflow: hidden;
+    padding: 20px 0 60px;
+}
+
+section#about .Box2 .firstBox{
+    float: left;
+    width: 40%;
+    padding-right: 10px;
+}
+
+section#about .Box2 .firstBox p{
+    color: #474747;
+    font-size: 14px;
+}
+
+section#about .Box2 .secondBox {
+    float: left;
+    width: 60%;
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+section#about .Box2 .secondBox .boxImage{
+    position: relative;
+    overflow: hidden;
+}
+
+section#about .Box2 .secondBox .boxImage::before{
+    content: '\f0c1';font-weight: 800;
+    font-family: "Font Awesome 5 Free";
+    font-size: x-large;
+    text-align: center;
+    color: var(--textColor);
+    background-color: rgba(33 150 243 / 0.6);
+    position: absolute;
+    left: 0;top: -100%;
+    width: 100%;height: 100%;
+    transition: 0.4s ease-in-out;
+    line-height: 156px;
+}
+
+section#about .Box2 .secondBox .boxImage:hover::before{
+    top: 0;
+}
+
+section#about .Box2 .secondBox .boxImage img{
+    width: 100%;
+    display: block;
+}
+
+/* Edit Screen 992px */
+@media (max-width: 992px) {
+    section#about .Box2{
+        text-align: center;
+    }
+    section#about .Box2 .firstBox,
+    section#about .Box2 .secondBox{
+        clear: both;
+        width: 100%;
+        padding-right: 0;
+    }
+    section#about .Box2 .headingRepeat h3{
+        text-align: left;
+    }
+}
+/* Edit Screen 767px */
+@media (max-width: 767px){
+    section#about .Box2 .secondBox{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    section#about .Box2 .secondBox .boxImage{
+        width: 80%;
+    }
+    section#about .Box2 .headingRepeat h3{
+        text-align: center;
+    }
+}
+/* End About section */
+
+/* Start Testimonials Section */
+section#testimonials{
+    background: url(../Photo/testmonialsBackground1.jpg) center no-repeat fixed;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+section#testimonials .container{
+    position: relative;
+    z-index: 2;
+}
+
+section#testimonials div h3{
+    text-align: center;
+    color: var(--textColor);
+    font-weight: 600;
+    font-size: xx-large;
+    margin-bottom: 30px;
+}
+
+section#testimonials .Box{
+    display: flex;
+}
+
+section#testimonials .Box .boxItem{
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+section#testimonials .Box .boxItem p{
+    color: var(--textColor);
+}
+
+section#testimonials .Box .boxItem .image{
+    width: 100px;
+    margin: 30px auto;
+}
+
+section#testimonials .Box .boxItem .image img{
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+}
+
+section#testimonials .Box .boxItem span{
+    color: var(--mainColor);
+    font-size: larger;
+    display: block;
+    margin-bottom: 10px;
+}
+
+section#testimonials .Box .boxItem q{
+    color: var(--textColor);
+    font-size: smaller;
+    
+}
+
+/* End Testimonials Section */
+/* Start portfolio section */
+section#portfolio{
+    padding: 60px 0;
+}
+
+section#portfolio .Btns{
+    margin-bottom: 50px;
+}
+
+section#portfolio .Btns button{
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #474747;
+    color: #000;
+    cursor: pointer;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+section#portfolio .Btns button:hover,
+section#portfolio .Btns button.Active{
+    color: #fff;
+    background-color: var(--mainColor);
+    border: transparent;
+}
+
+section#portfolio .imgshuffle{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+section#portfolio .imgshuffle .imageBox{
+    width: calc((98% / 3));
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+section#portfolio .imgshuffle .imageBox:hover::before,
+section#portfolio .imgshuffle .imageBox:hover .Info{
+    left: 0;
+}
+
+section#portfolio .imgshuffle .imageBox::before{
+    content: '';
+    position: absolute;
+    left: 100%;top: 0;
+    width: 100%;height: 100%;
+    background-color: rgba(33 150 243 / 0.6);
+    transition: 0.3s ease-in-out;
+}
+
+section#portfolio .imgshuffle .imageBox .Info{
+    position: absolute;
+    left: 100%;top: 0;
+    width: 100%;height: 100%;
+    transition: 0.8s ease-in-out;
+}
+
+section#portfolio .imgshuffle .imageBox .Info h5{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--textColor);
+    padding: 10px;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+section#portfolio .imgshuffle .imageBox .Info i{
+    position: absolute;
+    right: 10px;bottom: 10px;
+    color: var(--textColor);
+    user-select: none;
+    cursor: pointer;
+}
+
+section#portfolio .imgshuffle .imageBox:not(:nth-of-type(3),:nth-of-type(6)){
+    margin-right: 1%;
+}
+
+section#portfolio .imgshuffle .imageBox img{
+    display: block;
+    max-width: 100%;
+}
+
+/* Edit flexBox Screen 767px */
+@media (max-width: 767px) {
+    section#portfolio .Btns{
+        text-align: center;
+    }
+    section#portfolio .imgshuffle{
+        flex-direction: column;
+    }
+    section#portfolio .imgshuffle .imageBox{
+        width: 80%;
+        margin-right: 0;
+    }
+}
+/* End portfolio section */
+/* Start Footer */
+footer#contact{
+    padding: 60px 0;
+    background-color: #1e272e;
+}
+
+footer#contact .Box{
+    overflow: hidden;
+}
+
+footer#contact .Box .boxItem{
+    float: left;
+    width: calc(97% / 4);
+}
+
+footer#contact .Box .boxItem:not(:last-child){
+    margin-right: 1%;
+}
+
+footer#contact .Box .boxItem h3{
+    color: var(--textColor);
+    margin-bottom: 10px;
+    letter-spacing: 1.1px;
+}
+
+footer#contact .Box .boxItem p{
+    color: #6c6c6f;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+footer#contact .Box .boxItem i{
+    color: #eee;
+    border: 1px solid #eee;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+    margin-right: 2px;
+    border-radius: 3px;
+}
+
+footer#contact .Box .boxItem i:hover{
+    color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+
+footer#contact .Box .boxItem ul li{
+    display: inline-block;
+}
+
+footer#contact .Box .boxItem ul li a{
+    color: #eee;
+    user-select: none;
+    display: block;
+    border: 1px solid #eee;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+    margin: 5px 2px;
+    border-radius: 3px;
+}
+
+footer#contact .Box .boxItem ul li a:hover{
+    color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+
+footer#contact .Box .boxItem .post .boxImage{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+footer#contact .Box .boxItem .post img{
+    display: block;
+    float: left;
+    width: 75px;
+    margin-right: 10px;
+}
+
+footer#contact .Box .boxItem .post .textBox{
+    float: left;
+    width: calc(98% - 85px);
+}
+
+footer#contact .Box .boxItem .post .textBox h4{
+    color: #eee;
+}
+
+footer#contact .Box .boxItem .post .textBox span{
+    color: #6c6c6f;
+    font-size: small;
+}
+
+footer#contact .Box .boxItem .paddingDiv{
+    color: #eee;
+    padding: 10px 0 10px 5px;
+    border-bottom: 1px solid #eee ;
+}
+
+/* Edit footer screen 767px */
+@media (max-width: 767px) {
+    footer#contact .Box .boxItem{
+        margin: 0 auto 20px auto;
+        clear: both;
+        float: none;
+        width: 80%;
+    }
+    footer#contact .Box .boxItem:not(:last-child){
+        margin: 0 auto 20px auto;
+    }
+}
+
+footer .container > p{
+    color: #6c6c6f;
+}
+/* End Footer */
