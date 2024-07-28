@@ -1,0 +1,12 @@
+section.chef {
+    padding: 60px 0;
+    position: relative;
+    background-color: #fafafa;
+    z-index: 1;
+
+    .cards {
+        display: grid;
+        gap: 1rem 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}

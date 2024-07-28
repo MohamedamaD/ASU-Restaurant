@@ -1,0 +1,30 @@
+button.custom-button {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+    &:hover {
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+
+    &.border {
+        background-color: transparent;
+        color: var(--primary-color);
+
+        &:hover {
+            color: var(--white-color);
+            background-color: var(--primary-color);
+        }
+
+    }
+
+    a {
+        color: inherit;
+        font-weight: bold;
+        display: block;
+        padding: 10px 20px;
+    }
+}

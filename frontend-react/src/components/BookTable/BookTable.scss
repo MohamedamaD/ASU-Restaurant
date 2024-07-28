@@ -1,0 +1,15 @@
+form#book-form {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px;
+    gap: 20px;
+    height: 100%;
+    background-color: var(--primary-color);
+
+    label {
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    option {color: #000;}
+}

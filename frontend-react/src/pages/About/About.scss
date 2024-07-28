@@ -1,0 +1,66 @@
+.App-about {
+    position: relative;
+
+
+    section.book {
+        padding: 40px 0;
+        background-color: var(--primary-color);
+        text-align: center;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            color: var(--primary-color) !important;
+            background-color: var(--white-color);
+
+            &:hover {
+                color: var(--white-color) !important;
+                background-color: transparent;
+                border: 1px solid var(--white-color);
+            }
+        }
+    }
+
+    section.progress {
+        background: url('../../assets/fixed-header.jpg') center center no-repeat fixed;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 60px 0;
+
+        .wrapper {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                gap: 60px;
+            }
+
+            .item {
+                text-align: center;
+                width: calc((100% - 60px) / 4);
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
+
+                span {
+                    font-size: xx-large;
+                    font-weight: bold;
+                }
+
+                h5 {
+                    font-size: larger;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+$mainColor :#081c15;
+
+.App-register {
+    background-color: $mainColor;
+    // background: linear-gradient(45deg, #081c15, #2a845e, #427a61);
+    .wrapper {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+
+        .box {
+            width: 50%;
+
+            &.form-box {
+                @media screen and (max-width:992px) {
+                    width: 100%;
+                }
+
+                .signing {
+                    max-width: 400px;
+                    margin: auto;
+                    margin-bottom: 2rem;
+
+                    h5 {
+                        font-size: larger;
+                    }
+
+                    a {
+                        text-decoration: underline;
+                    }
+
+                    * {
+                        margin-bottom: 0.3rem;
+                    }
+                }
+
+                label {
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                }
+
+
+                form#register-form {
+                    max-width: 400px;
+                    margin: auto;
+
+                    * {
+                        width: 100%;
+                    }
+                }
+
+                .form-item {
+                    margin-bottom: 2rem;
+
+                    input[type='submit'] {
+                        color: $mainColor;
+                    }
+                }
+            }
+
+            &.assets-box {
+                align-self: stretch;
+                // overflow: hidden;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 90%;
+                    margin: 7.5% 0;
+                    object-fit: cover;
+                    border-radius: 6px;
+                    box-shadow: 0 0 2px 1px #fff;
+                }
+
+                @media screen and (max-width:992px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

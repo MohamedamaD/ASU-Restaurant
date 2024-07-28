@@ -1,0 +1,82 @@
+header.app-header {
+    height: 100vh;
+    position: relative;
+    display: grid;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    transition: background 0.5s ease;
+
+    .hero {
+        text-align: center;
+        z-index: 1;
+
+        h1 {
+            font-size: calc(3vw + 3rem);
+            font-weight: 500;
+            margin-bottom: 10px;
+
+            @media screen and (max-width:400px) {
+                font-size: calc(2vw + 2rem);
+            }
+        }
+
+        span {
+            font-size: x-large;
+            padding: 0 10px;
+            border: 1px solid var(--white-color);
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 10px;
+
+            @media screen and (max-width:400px) {
+                font-size: 1rem;
+            }
+        }
+
+        strong {
+            color: var(--primary-color);
+            font-size: x-large;
+            padding: 0 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            position: relative;
+
+            @media screen and (max-width:400px) {
+                font-size: 1rem;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: var(--primary-color);
+                border-radius: 3px;
+
+                @media screen and (max-width:400px) {
+                    display: none;
+                }
+            }
+
+            &::before {
+                left: 100%;
+            }
+
+            &::after {
+                right: 100%;
+            }
+        }
+    }
+
+    .backdrop {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}

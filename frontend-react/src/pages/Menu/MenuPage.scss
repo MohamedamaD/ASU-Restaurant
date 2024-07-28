@@ -1,0 +1,42 @@
+.App-menu {
+    section.book-menu {
+        padding: 60px 0;
+        background-color: var(--primary-color);
+
+        h3 {
+
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        form {
+            display: grid !important;
+            gap: 30px 20px !important;
+            padding: 0 !important;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+
+            @media screen and (max-Width:767px) {
+                grid-template-columns: repeat(1, minmax(100px, 1fr)) !important;
+            }
+
+            label {
+                grid-column: 1/4;
+            }
+
+            input,
+            select {
+                @media screen and (max-Width:767px) {
+                    grid-column: span 3;
+                }
+            }
+
+            input[type='submit'] {
+                grid-column-start: 2;
+
+                @media screen and (max-Width:767px) {
+                    grid-column: span 3;
+                }
+            }
+        }
+    }
+}
